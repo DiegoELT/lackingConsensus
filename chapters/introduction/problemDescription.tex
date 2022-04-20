@@ -1,15 +1,23 @@
-\subsection{Problem Description}
+\section{Problem Description}
 
 To achieve this goal, we propose a compartive study that allows to determine the most recommendable technique for extensive DNA sequences, all the way to WGA. We must consider that the latter are usually made up of 5 Giga-base-pairs (Gbp).
 
 \medskip
 
-In Torreno's work \cite{Tirado2015BreakingTC} we observed how a single insertion or deletion of a nucleotide (or character from the previously mentioned alphabet) can cause the rupture of a HSP or aligned fragment. This results on a series of fragments of reduced size, separated by small unaligned substrings. This could have been avoided by using techniques which consider gaps, since those can consider a bound to ignore the \textit{indels}, as it can be observed on Figure \ref{fragmentImprovement}.
+In Torreno's work \cite{Tirado2015BreakingTC} we observed how a single insertion or deletion of a nucleotide (or character from the previously mentioned alphabet) can cause the rupture of a HSP or aligned fragment. The result was a series of fragments of reduced size, separated by small unaligned substrings. This could have been avoided by using techniques which consider gaps, since those can consider a bound to ignore the \textit{indels}.
+
+\medskip
+
+This idea is further elaborated on Figure \ref{fragmentImprovement}, which illustrates the use of \textit{gaps} as a tool to extend HSPs into larger fragments. In the picture we can observe two graphics which represent the same comparison between two hypothetical sequences: $A$ and $B$. The bottom left alignment is a gapless one, and as such identifies HSPs (of the form $H_i$) of reduced size. 
+
+\medskip
+
+In contrast, the bottom right comparison takes into consideration gaps (of the form $e_i$), which, when added to the HSPs, result in fragments larger in size and closer to each other. 
 
 \begin{figure}
   \centering
   \includegraphics[width=0.95\textwidth]{images/fragmentImprovement.png}
-  \caption[]{Example of how the inclusion of \textit{gaps} can result in a better global alignment. Represented as $\epsilon$, they allow us to obtain larger alignments with variations on only one or two characters.}
+  \caption[]{Example of how the inclusion of \textit{gaps} can result in a better global alignment. Represented as $e_i$, they allow us to obtain larger alignments with variations on only one or two characters.}
   \label{fragmentImprovement}
 \end{figure}
 

@@ -1,9 +1,11 @@
-\documentclass[]{article}
+\documentclass[]{report}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{times}
 \usepackage{fancyhdr}
+\usepackage{import}
+\usepackage{svg}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{cite}
@@ -15,8 +17,12 @@
 
 \begin{document}
   \maketitle
+  \input{chapters/coverpage.tex}
+
+  \tableofcontents
+
   % Motivation and Context
-  \section{Motivation and Context}
+  \chapter{Motivation and Context}
   \input{chapters/introduction/introduction.tex}
   \input{chapters/introduction/problemDescription.tex}
   \input{chapters/introduction/justification.tex}
